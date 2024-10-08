@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crunchyroll chipeao</title>
+
+    <link rel="stylesheet" href="base.css">
+</head>
+<body id="body" onload="getList()">
+    <div>
+        <header id="logo">
+            <h1 id="chipeao">
+                <img id="crunchyroll-logo" src="http://127.0.0.1:5500/Reproductor/Crunchyroll.svg.png" alt=""> chipeao</h1>
+        </header>
+    </div>
+        <div id="divPlayer" class="fullscreen" data-volume-level="muted">
+            <div id="video-controls-container">
+                <div id="timeline-container">
+                    <div id="timeline">
+                        <img id="preview-img" src="">
+                        <div id="thumb-indicator"></div>
+                    </div>
+                    <div id="controls">
+                        <button>
+                            <img id="prev-video-icon" src="http://127.0.0.1:5500/Reproductor/images - copia.png">
+                            <img id="play-icon" src="http://127.0.0.1:5500/Reproductor/descarga.png">
+                            <img id="pause-icon" src="http://127.0.0.1:5500/Reproductor/pause-white-color-icon-vector.jpg">
+                            <img id="next-video-icon" src="http://127.0.0.1:5500/Reproductor/images.png">
+                            <img id="repeat-video-icon" src="http://127.0.0.1:5500/Reproductor/descarga (1).png">
+                            <div id="volume-container">
+                                <img id="volume-icon" onclick="mute()" src="http://127.0.0.1:5500/Reproductor/volumen.png">
+                                <img id="volume-muted-icon" onclick="mute()" src="http://127.0.0.1:5500/Reproductor/volumen_muted.png">
+                                <input id="volume-slider" type="range" min="0" max="1" step="any" value="1">
+                            </div>
+                            <div id="duration-container">
+                                <div id="current-time"></div>
+                                /
+                                <div id="total-time"></div>
+                            </div>
+                            <img id="fullscreen-icon" onclick="openFullscreen()" src="http://127.0.0.1:5500/Reproductor/descarga (2).png">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <video id="player"></video>
+        </div id="divLista">
+        <table id="_lista">
+            <thead>
+                <tr>
+                    <td id="headerLista">Lista de reproduccion</td>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+
+            </tbody>
+        </table>
+    <div id="tituloVideo">
+        <h1 id="ti"></h1>
+        <h2 id="ar"></h2>
+        <h3 id="fe"></h3>
+    </div>
+    <div id="comentarios">
+        <table>
+            <thead>
+                <tr>
+                    <td>Comentarios</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <input id="inputUsuario" type="text" placeholder="Ingrese su nombre de usuario aqui.">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input id="inputComentarios" type="text" placeholder="Inserte su comentario aqui.">
+                    </td>
+                </tr>
+                <tr>
+                    <td id="btnCancelar">
+                        <button id="btnCancelar-color">Cancelar</button>
+                    </td>
+                    <td id="btnComentar">
+                        <button id="btnComentar-color" onclick="printComment()">Comentar</button>
+                    </td>
+                </tr>
+                <tr id="comment_section">
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
